@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finder</title>
+    <link rel="icon" href="images/2025-08-02.png" type="image/png">
+    <link rel="stylesheet" href="taskStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <nav>
+        <div class="icon" id="hamburgerIcon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>Finder</p>
+        </div>
+        <ul class="navList">
+            <li class="dropli"><a href="#">Home</a></li>
+            <li class="dropli"><a href="#">Listings</a></li>
+            <li class="dropli"><a href="#">Account</a></li>
+            <li class="dropli"><a href="#">Pages</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Components</a></li>
+        </ul>
+        <div class="navRight">
+            <a href="#" class="navRightIcon"><i class="fa-regular fa-sun" id="sun"></i></a></i>
+            <ul class="sunList">
+                <li></li>
+            </ul>
+            <a href="#" class="navRightIcon" id="user"><i class="fa-regular fa-user"></i></a></i>
+            <a href="#" class="navRightbtn">Join</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="hamburgerHeader">
+                <h2>Browse Finder</h2>
+                <i class="fa-solid fa-xmark" id="closeIcon"></i>
+            </div>
+            <div class="hamburgerContent">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </li>
+                    <li>
+                        <a href="#">Listings</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </li>
+                    <li>
+                        <a href="#">Account</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </li>
+                    <li>
+                        <a href="#">Pages</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </li>
+                    <li>
+                        <a href="#">Docs</a>
+                    </li>
+                    <li>
+                        <a href="#">Components</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="shadow" id="shadow"></div>
+    </nav>
+    <aside>       
+         <a href="#" class="customizebtn">CUSTOMIZE</a>
+    </aside>
+    <header>
+        <div class="headerLeftImg">
+            <img src="images/girl carpenter.jpg" alt="girl carpenter" width="100%">
+        </div>
+        <div class="headerContent">
+            <h1>Explore top-rated certified pros nearby</h1>
+            <form action="" class="headerSearch">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="What service do you need?">
+                </div>
+                <p>|</p>
+                <div class="search">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Zip code">
+                </div>
+                <a href="#" id="searchbtn">Search</a>
+            </form>
+            <ul class="headerlist">
+                <li><a href="#">Handyperson</a></li>
+                <li><a href="#">Electrician</a></li>
+                <li><a href="#">Plumbing</a></li>
+                <li><a href="#">Landscaping</a></li>
+                <li><a href="#">Roofing</a></li>
+            </ul>
+        </div>
+        <div class="headerRightImg">     
+            <img src="images/hero.png" alt="builder" width="100%">
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <div class="topContainer">
+                <h2>Browse pros in your area</h2>
+                <a href="#">View all ></a>
+            </div>
+            
+            <div class="bottomContainer">
+                <div class="service">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Flooring</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-person-digging"></i>
+                    <p>Concrete</p>
+                </div>
+                
+                <div class="service">
+                    <i class="fa-solid fa-broom"></i>
+                    <p>Cleaning</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-toolbox"></i>
+                    <p>Handyperson</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-paint-roller"></i>
+                    <p>Painting</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-faucet-drip"></i>
+                    <p>Plumbing</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-bug"></i>
+                    <p>Pest Control</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-dumpster-fire"></i>
+                    <p>Heating and Furnace</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-plug"></i>
+                    <p>Electrician</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-table-cells"></i>
+                    <p>Roofing</p>
+                </div>
+
+                <div class="service">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <p>Carpentry</p>
+                </div>
+                
+                <div class="service">
+                    <i class="fa-solid fa-tree-city"></i>
+                    <p>Landscaping</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nearYou">
+            <div class="nearYouLeft">
+                <div class="nearYouLeftHeader">
+                    <a href="#">Get matched with local pros</a>
+                    <p>for your next home project</p>                
+                </div>
+                <img src="images/house.png" alt="">
+            </div>
+            <div class="nearYouRight">
+                <div class="nearYouRightHeader">
+                    <h2>Popular projects near you</h2>
+                    <a href="#">View all</a>
+                </div>
+                <div class="nearYouRightContent">
+                    <div class="nearYouRightBox">
+                        <div class="nearYouRightImg">
+                            <img src="images/terrace.jpg" alt="" width="100%">
+                        </div>
+                        <div class="description">
+                            <a href="#">Decks & porches</a>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.7 <span>(95)</span></p>
+                            </div>
+                            <p>From $1,890</p>
+                        </div>
+                    </div>
+                    <div class="nearYouRightBox">
+                        <div class="nearYouRightImg">
+                            <img src="images/louvre.jpg" alt="" width="100%">
+                        </div>
+                        <div class="description">
+                            <a href="#">Decks & porches</a>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.7 <span>(95)</span></p>
+                            </div>
+                            <p>From $1,890</p>
+                        </div>
+                    </div>
+                    <div class="nearYouRightBox">
+                        <div class="nearYouRightImg">
+                            <img src="images/man cleaning.jpg" alt="" width="100%">
+                        </div>
+                        <div class="description">
+                            <a href="#">Decks & porches</a>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.7 <span>(95)</span></p>
+                            </div>
+                            <p>From $1,890</p>
+                        </div>
+                    </div>
+                    <div class="nearYouRightBox">
+                        <div class="nearYouRightImg">
+                            <img src="images/water drop.jpg" alt="" width="100%">
+                        </div>
+                        <div class="description">
+                            <a href="#">Decks & porches</a>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.7 <span>(95)</span></p>
+                            </div>
+                            <p>From $1,890</p>
+                        </div>
+                    </div>
+                    <div class="nearYouRightBox">
+                        <div class="nearYouRightImg">
+                            <img src="images/woman with gloves.jpg" alt="" width="100%">
+                        </div>
+                        <div class="description">
+                            <a href="#">Decks & porches</a>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.7 <span>(95)</span></p>
+                            </div>
+                            <p>From $1,890</p>
+                        </div>
+                    </div>
+                    <div class="nearYouRightBox">
+                        <div class="nearYouRightImg">
+                            <img src="images/fence repair.jpg" alt="" width="100%">
+                        </div>
+                        <div class="description">
+                            <a href="#">Decks & porches</a>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.7 <span>(95)</span></p>
+                            </div>
+                            <p>From $1,890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popularProjects">
+            <div class="popularProjectsTitle">
+            <h2>Popular home projects</h2> 
+            <a href="#">View all ></a>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper projects">
+                    <div class="swiper-slide project">
+                        <div class="projectheader">
+                            <img src="images/woman with gloves.jpg" alt="" width="100%">
+                            <div class="overlay"></div>
+                            <h3>One time cleaning service</h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="projectbody">
+                            <div class="leftProjectBody">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.9 <span>(256) </span> From $80 </p>
+                            </div>
+                            <div class="rightProjectBody">
+                                <a href="#">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide project">
+                        <div class="projectheader">
+                            <img src="images/overalls man.jpg" alt="" width="100%">
+                            <div class="overlay"></div>
+                            <h3>One time cleaning service</h3>
+                            <i class="fa-regular fa-heart"></i>
+                            
+
+                        </div>
+                        <div class="projectbody">
+                            <div class="leftProjectBody">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <p>4.7 <span>(63) </span> From $250 </p>
+                                
+                            </div>
+                            <div class="rightProjectBody">
+                                <a href="#">Book Now</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide project">
+                    <div class="projectheader">
+                        <img src="images/fence repair.jpg" alt="" width="100%">
+                        <div class="overlay"></div>
+                        <h3>One time cleaning service</h3>
+                        <i class="fa-regular fa-heart"></i>
+                        
+
+                    </div>
+                    <div class="projectbody">
+                        <div class="leftProjectBody">
+                            <i class="fa-solid fa-star"></i>
+                            <p>4.8 <span>(29) </span> From $310 </p>
+                        </div>
+                        <div class="rightProjectBody">
+                            <a href="#">Book Now</a>
+
+                        </div>
+
+                    </div>
+                    </div>
+                    <div class="swiper-slide project">
+                        <div class="projectheader">
+                            <img src="images/woman with gloves.jpg" alt="" width="100%">
+                            <div class="overlay"></div>
+                            <h3>One time cleaning service</h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="projectbody">
+                            <div class="leftProjectBody">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.9 <span>(256) </span> From $80 </p>
+                            </div>
+                            <div class="rightProjectBody">
+                                <a href="#">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide project">
+                        <div class="projectheader">
+                            <img src="images/overalls man.jpg" alt="" width="100%">
+                            <div class="overlay"></div>
+                            <h3>One time cleaning service</h3>
+                            <i class="fa-regular fa-heart"></i>
+                            
+
+                        </div>
+                        <div class="projectbody">
+                            <div class="leftProjectBody">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <p>4.7 <span>(63) </span> From $250 </p>
+                                
+                            </div>
+                            <div class="rightProjectBody">
+                                <a href="#">Book Now</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide project">
+                    <div class="projectheader">
+                        <img src="images/fence repair.jpg" alt="" width="100%">
+                        <div class="overlay"></div>
+                        <h3>One time cleaning service</h3>
+                        <i class="fa-regular fa-heart"></i>
+                        
+
+                    </div>
+                    <div class="projectbody">
+                        <div class="leftProjectBody">
+                            <i class="fa-solid fa-star"></i>
+                            <p>4.8 <span>(29) </span> From $310 </p>
+                        </div>
+                        <div class="rightProjectBody">
+                            <a href="#">Book Now</a>
+
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                },
+
+                keyboard: {
+                enabled: true,
+                },
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+            });
+            </script>
+        </section>
+
+        <section class="advice">
+            <div class="adviceHeader">
+                <h2>Expert advice</h2>
+                <a href="#">View all</a>
+            </div>
+            <div class="adviceContent">
+                <div class="adviceBox">
+                    <div class="adviseImg">
+                        <img src="images/woman with sponge.jpg" alt="" width="100%">
+                    </div>
+                    <div class="description">
+                        <p class="p1">Cleaning</p>
+                        <a href="#">Expert advice from masters of cleanliness</a>
+                        <p class="p2">Unlock the secrets to a spotless home with tips from cleaning professionals. From tackling stubborn...</p>
+                        <p class="p3">Oct 19, 2024</p>
+                    </div>
+                </div>
+                <div class="adviceBox">
+                    <div class="adviseImg">
+                        <img src="images/chair.jpg" alt="" width="100%">
+                    </div>
+                    <div class="description">
+                        <p class="p1">Cleaning</p>
+                        <a href="#">Expert advice from masters of cleanliness</a>
+                        <p class="p2">Unlock the secrets to a spotless home with tips from cleaning professionals. From tackling stubborn...</p>
+                        <p class="p3">Oct 19, 2024</p>
+                    </div>
+                </div>
+                <div class="adviceBox">
+                    <div class="adviseImg">
+                        <img src="images/venti.jpg" alt="" width="100%">
+                    </div>
+                    <div class="description">
+                        <p class="p1">Cleaning</p>
+                        <a href="#">Expert advice from masters of cleanliness</a>
+                        <p class="p2">Unlock the secrets to a spotless home with tips from cleaning professionals. From tackling stubborn...</p>
+                        <p class="p3">Oct 19, 2024</p>
+                    </div>
+                </div>
+                <div class="adviceBox">
+                    <div class="adviseImg">
+                        <img src="images/landscape.jpg" alt="" width="100%">
+                    </div>
+                    <div class="description">
+                        <p class="p1">Cleaning</p>
+                        <a href="#">Expert advice from masters of cleanliness</a>
+                        <p class="p2">Unlock the secrets to a spotless home with tips from cleaning professionals. From tackling stubborn...</p>
+                        <p class="p3">Oct 19, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="howItWorks">
+            <h2>How it works</h2>
+            <p>Effortlessly find, connect, and hire the perfect contractor for your job - all in just three easy steps.</p>
+            <div class="howBoxes">
+                <div class="howBox">
+                    <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>
+                    <h3>Explore</h3>
+                    <p>Browse through our curated list of contractors</p>
+                </div>
+                <div class="howBox">
+                    <i class="fa-regular fa-message"></i>
+                    <h3>Explore</h3>
+                    <p>Browse through our curated list of contractors</p>
+                </div>
+                <div class="howBox">
+                    <i class="fa-regular fa-rectangle-list"></i>
+                    <h3>Explore</h3>
+                    <p>Browse through our curated list of contractors</p>
+                </div>
+            </div>
+        </section>
+        <section class="grow">
+            <div class="growLeft">
+                <h2>Grow your business with us. Become a Pro today</h2>
+                <div class="growbtns">
+                    <a href="#" class="red">Add business</a>
+                    <a href="#" class="trans">Learn more</a>
+                </div>
+            </div>
+            <div class="growMiddle">
+                <p>Feature your business customers</p>
+            </div>
+            <div class="growRight">
+                <img src="images/girl carpenter.jpg" alt="" width="100%">
+            </div>
+        </section>
+
+        <section class="get">
+            <div class="getLeft">
+                <h2>Get Finder App</h2>
+                <p>Explore top-rated certified pros</p>
+                <div class="getbtns">
+                    <a href="#" class="apple">App Store</a>
+                    <a href="#" class="google">Google Play</a>
+                </div>
+            </div>
+            <div class="getRight">
+                <img src="images/phones.png" alt="" width="100%">
+            </div>
+        </section>
+
+        <section class="prices">
+            <div class="pricesHeader">
+                <h2>Common pricing references</h2>
+                <a href="#">View all</a>
+            </div>
+            <div class="pricesContent">
+                <div class="priceBox">
+                    <div class="leftBox">
+                        <img src="images/aspirateur.jpg" alt="" width="100%">
+                    </div>
+                    <div class="rightBox">
+                        <a href="#">Cleaning up after refairs</a>
+                        <div class="description">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.5 <span>(63)</span></p>
+                            </div>
+                            <p>From $150</p>
+                        </div>
+                        <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+                <div class="priceBox">
+                    <div class="leftBox">
+                        <img src="images/louvre.jpg" alt="" width="100%">
+                    </div>
+                    <div class="rightBox">
+                        <a href="#">Cleaning up after refairs</a>
+                        <div class="description">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.5 <span>(63)</span></p>
+                            </div>
+                            <p>From $150</p>
+                        </div>
+                        <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+                <div class="priceBox">
+                    <div class="leftBox">
+                        <img src="images/fence repair.jpg" alt="" width="100%">
+                    </div>
+                    <div class="rightBox">
+                        <a href="#">Cleaning up after refairs</a>
+                        <div class="description">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.5 <span>(63)</span></p>
+                            </div>
+                            <p>From $150</p>
+                        </div>
+                        <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+                <div class="priceBox">
+                    <div class="leftBox">
+                        <img src="images/gloves.jpg" alt="" width="100%">
+                    </div>
+                    <div class="rightBox">
+                        <a href="#">Cleaning up after refairs</a>
+                        <div class="description">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <p>4.5 <span>(63)</span></p>
+                            </div>
+                            <p>From $150</p>
+                        </div>
+                        <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="sub">
+            <div class="leftSub">
+                <p>Subscribe to our newsletter</p>
+                <a href="#" class="red">Subscribe</a>
+            </div>
+            <div class="rightSub">
+                <p>Need help?</p>
+                <a href="#">Contact us</a>
+            </div>
+        </section>
+        <section class="lists">
+            <div class="listsLeft">
+                <div class="logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Finder</p>
+                </div>
+                <p>Connecting you with reliable local contractors for all your service needs.</p>
+                <div class="logos">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="listsRight">
+                <div class="popular">
+                    <h2>Popular categories</h2>
+                    <div class="list1">
+                        <ul>
+                            <li><a href="#">Air conditioning</a></li>
+                            <li><a href="#">Painting</a></li>
+                            <li><a href="#">Painting</a></li>
+                            <li><a href="#">Electrician</a></li>
+                            <li><a href="#">Concrete</a></li>
+                            <li><a href="#">Plumbing</a></li>
+                            <li><a href="#">Air conditioning</a></li>
+                            <li><a href="#">Painting</a></li>
+                            <li><a href="#">Painting</a></li>
+                            <li><a href="#">Electrician</a></li>
+                            <li><a href="#">Concrete</a></li>
+                            <li><a href="#">Plumbing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="company">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Press & announcements</a></li>
+                        <li><a href="#">Careers at Finder</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="cities">
+            <h2>Top cities</h2>
+            <div class="citiesbtns">
+                <ul>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">chicago</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">chicago</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">chicago</a></li>    
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">chicago</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">chicago</a></li>                                     
+                </ul>
+            </div>
+        </section>
+        <section class="rights">
+            <div class="made">
+                <p>© All rights reserved. Made by <span>Createx Studio</span></p>
+            </div>
+            <div class="imgs">
+                <ul>
+                    <li><img src="images/visa.svg" alt=""></li>
+                    <li><img src="images/mastercard.svg" alt=""></li>
+                    <li><img src="images/paypal-dark-mode.svg" alt=""></li>
+                    <li><img src="images/google-pay-dark-mode.svg" alt=""></li>
+                    <li><img src="images/apple-pay-dark-mode.svg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+        
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
