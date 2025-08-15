@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+    --background-color: white;
+    --near-bg: #EEF1F6;
+    --expert-bg: #F5F7FA;
+    --get-bg: #FBEEEE;
+    --hover: #F2F3F5;
+    --primary-color: rgb(17, 24, 39);
+    --btn: #D85151;
+    --btn-hover: #C92D2D;
+    --header-bg: #3D7A81;
+    --star: #fc9231;
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -7,6 +19,7 @@
 }
 body{
     overflow-x: hidden;
+    background-color: var(--background-color);
 }
 a{
     text-decoration: none;
@@ -23,26 +36,25 @@ nav{
     left: 0px;
     top: 0px;
     z-index: 100;
-    background-color: white;
+    background-color: var(--background-color);
     width: 100%;
     padding: 10px 29px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(160, 161, 162, 0.5);
+    border-bottom: 1px solid rgba(160, 161, 162, 0.1);
 }
 nav .icon{
     display: none;
 }
 nav .hamburger{
-    /* display: none; */
     position: fixed;
     top: 0px;
     left: -100%;
     transition: left 0.3s;
     height: 100vh;
     width: 70%;
-    background-color: white;
+    background-color: var(--background-color);
     padding: 0px 20px;
     z-index: 100;
 }
@@ -51,6 +63,7 @@ nav .hamburger .hamburgerHeader{
     font-size: 13px;
     align-items: center;
     justify-content: space-between;
+    color: var(--primary-color);
 }
 nav .hamburger .hamburgerHeader i{
     color: rgb(154, 156, 160);
@@ -58,7 +71,7 @@ nav .hamburger .hamburgerHeader i{
     cursor: pointer;
 }
 nav .hamburger .hamburgerHeader i:hover{
-    color: rgb(17, 24, 39);
+    color: var(--primary-color);
 }
 nav .hamburger .hamburgerContent li{
     padding: 10px 20px;
@@ -68,14 +81,15 @@ nav .hamburger .hamburgerContent li{
     cursor: pointer;
 }
 nav .hamburger .hamburgerContent li a{
-    color: rgb(56, 59, 66);
+    color: var(--primary-color);
     font-weight: 500;
 }
 nav .hamburger .hamburgerContent li i{
     font-size: 10px;
+    color: var(--primary-color);
 }
 nav .hamburger .hamburgerContent li:hover{
-    background-color: #F2F3F5;
+    background-color: var(--hover);
 }
 nav .shadow{
     display: none;
@@ -94,7 +108,7 @@ nav .logo i{
     font-size: 24px;
     height: 36px;
     color: white;
-    background-color: #D85151;
+    background-color: var(--btn);
     padding: 5px;
     border-radius: 20px;
     border-bottom-right-radius: 5px;
@@ -103,6 +117,7 @@ nav .logo i{
 nav .logo p{
     font-size: 24px;
     font-weight: 600;
+    color: var(--primary-color);
 }
 nav .navList{
     list-style-type: none;
@@ -112,7 +127,7 @@ nav .navList li a{
     padding: 12px 18px;
     border-radius: 10px;
     font-size: 16px;
-    color: rgb(17, 24, 39);
+    color: var(--primary-color);
     font-weight: 500;
     text-decoration: none;
 }
@@ -124,12 +139,13 @@ nav .navList .dropli a::after{
     font-weight: 900; 
 }
 nav .navList li a:hover{
-    background-color: #F2F3F5;
+    background-color: var(--hover);
 }
 nav .navRight .navRightIcon{
-    color: rgb(17, 24, 39);
+    color: var(--primary-color);
     font-size: 18px;
     padding: 11px;
+    cursor: pointer;
     transition: transform 1s;
 }
 nav .navRight .navRightIcon:hover{
@@ -151,13 +167,13 @@ nav .navRight .navRightbtn{
     border-radius: 8px;
     font-size: 16px;
     color: white;
-    background-color: #D85151;
-    border-color: #D85151;
+    background-color: var(--btn);
+    border-color: var(--btn);
     text-decoration: none;
 }
 nav .navRight .navRightbtn:hover{
-    background-color: #C92D2D;
-    border-color: #C92D2D;
+    background-color: var(--btn-hover);
+    border-color: var(--btn-hover);
 }
 nav .navRight .navRightbtn::before{
     font-family: "Font Awesome 6 Free";
@@ -172,10 +188,11 @@ nav .navRight .navRightbtn:hover::before{
     transform: scale(1.2);
 }
 aside .customizebtn{
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 8px 12px;
-    background-color: white;
-    color: rgb(17, 24, 39);
+    background-color: var(--background-color);
+    color: var(--primary-color);
     border-radius: 20px;
     border: 1px solid rgb(72, 76, 82);
     font-size: 10px;
@@ -193,7 +210,7 @@ aside .customizebtn::after{
     display: inline-block;
     padding-left: 7px;
     font-size: 15px;
-    color: rgb(72, 76, 82);
+    color: var(--primary-color);
     transform-origin: 65%;
 }
 aside:hover .customizebtn::after{
@@ -202,8 +219,86 @@ aside:hover .customizebtn::after{
 @keyframes spin{
     100%{transform: rotate(360deg);}
 }
+aside .colors{
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--background-color);
+    z-index: 1000;
+    transition: right 0.3s;
+    padding: 20px;
+}
+aside .colors .colorsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+aside .colors .colorsHeader i{
+    cursor: pointer;
+    color: rgb(154, 156, 160);
+    font-size: 20px;
+}
+aside .colors .colorsHeader i:hover{
+    color: var(--primary-color);
+}
+aside .colors .colorsContent .title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    color: var(--primary-color);
+}
+aside .colors .colorsContent .title i{
+    color: #9ca3af;
+    padding: 30px 10px 10px 0px;
+}
+aside .colors .colorsContent .colorList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+aside .colors .colorsContent .colorList .colorBox{
+    flex-basis: 40%;
+    margin-top: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+aside .colors .colorsContent .colorList .colorBox input{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block; 
+}
+aside .colors .colorsFooter button{
+    background-color: var(--hover);
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+aside .colors .colorsFooter button:hover{
+    filter: brightness(0.9);
+}
+aside .colors .colorsFooter button::before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f2ed";
+    font-weight: 900;
+    padding-right: 10px;
+}
 header{
-    background-color: #3D7A81;
+    background-color: var(--header-bg);
     display: flex;
     padding: 130px 0px;
     height: 545px;
@@ -265,13 +360,13 @@ header .headerContent .headerSearch #searchbtn{
     border-radius: 8px;
     font-size: 16px;
     color: white;
-    background-color: #D85151;
-    border-color: #D85151;
+    background-color: var(--btn);
+    border-color: var(--btn);
     text-decoration: none;
 }
 header .headerContent .headerSearch #searchbtn:hover{
-    background-color: #C92D2D;
-    border-color: #C92D2D;
+    background-color: var(--btn-hover);
+    border-color: var(--btn-hover);
 }
 header .headerContent .headerlist{
     width: 100%;
@@ -314,6 +409,8 @@ header .headerRightImg img{
 }
 .services{
     padding: 40px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 .services .bottomContainer{
     display: flex;
@@ -327,24 +424,25 @@ header .headerRightImg img{
     margin: 10px 0px ;
 }
 .services .bottomContainer .service>i{
-    background-color: #e3e7ec;
-    color: #6C757D;
+    background-color: var(--hover);
+    color: var(--primary-color);
     padding: 10px;
     border-radius: 50%;
     font-size: 16px;
 }
 .services .bottomContainer .service>p{
-    color: #6C757D;
+    color: var(--primary-color);
     padding: 10px;
 }
 .nearYou{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: var(--background-color);
 }
 .nearYou .nearYouLeft{
     flex-basis: 25%;
-    background-color: #EEF1F6;
+    background-color: var(--near-bg);
     border-radius: 10px;
     height: 400px;
     position: relative;
@@ -355,7 +453,7 @@ header .headerRightImg img{
 }
 .nearYou .nearYouLeft .nearYouLeftHeader a{
     font-size: 28px;
-    color: #000000;
+    color: var(--primary-color);
     font-weight: 600;
     text-align: center;
     width: 200px;
@@ -383,9 +481,10 @@ header .headerRightImg img{
 .nearYouRight .nearYouRightHeader h2{
     font-size: 32px;
     padding: 0px 0px 20px;
+    color: var(--primary-color);
 }
 .nearYouRight .nearYouRightHeader a{
-    color: rgb(17, 24, 39);
+    color: var(--primary-color);
     font-size: 16px;
 }
 .nearYouRight .nearYouRightHeader a:hover{
@@ -424,9 +523,10 @@ header .headerRightImg img{
     flex-direction: column;
     justify-content: space-between; */
     font-size: 14px;
+    color: var(--primary-color);
 }
 .nearYouRight .nearYouRightContent .nearYouRightBox .description a{
-    color:rgb(0, 0, 0);
+    color:var(--primary-color);
     font-size: 16px;
     padding-bottom: 10px;
     font-weight: 600;
@@ -442,23 +542,24 @@ header .headerRightImg img{
     font-size: 14px;
 }
 .nearYouRight .nearYouRightContent .nearYouRightBox .description .star i{
-    color: #FC9231;
+    color: var(--star);
     padding-right: 10px;
 }
 
 section.popularProjects{
     padding: 40px;
+    background-color: var(--background-color);
 }
 section.popularProjects .popularProjectsTitle{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    color: rgb(17, 24, 39);
+    color: var(--primary-color);
     font-size: 25px;
     margin-bottom: 30px;
 }
 section.popularProjects .popularProjectsTitle a{
-    color: rgb(17, 24, 39);
+    color: var(--primary-color);
     font-size: 16px;
 }
 section.popularProjects .projects{
@@ -526,30 +627,32 @@ section.popularProjects .project .projectbody .leftProjectBody{
     justify-content: space-between;
     align-items: baseline;
     font-size: 14px;
+    color: var(--primary-color);
 }
 section.popularProjects .project .projectbody .leftProjectBody span{
     color: #6C757D;
     font-size: 12px;
 }
 section.popularProjects .project .projectbody .leftProjectBody i{
-    color: rgb(252, 146, 49);
+    color: var(--star);
     padding: 0px 5px;
 }
 section.popularProjects .project .projectbody .rightProjectBody a{
-    color: black;
+    color: var(--primary-color);
     font-size: 14px;
     display: inline-block;
     padding: 10px 15px;
-    border:1px solid black;
+    border:1px solid var(--primary-color);
     border-radius: 10px;
 }
 section.popularProjects .project .projectbody .rightProjectBody a:hover{
-    color: white;
-    background-color: black;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 .advice{
     margin-top: 40px;
-    background-color: #F5F7FA;
+    background-color: var(--expert-bg);
     padding: 90px 40px;
 }
 .advice .adviceHeader{
@@ -557,12 +660,13 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     align-items: baseline;
     justify-content: space-between;
     margin-bottom: 30px;
+    color: var(--primary-color);
 }
 .advice .adviceHeader h2{
     font-size: 32px;
 }
 .advice .adviceHeader a{
-    color: #343b41;
+    color: var(--primary-color);
 }
 .advice .adviceHeader a:hover{
     text-decoration: underline;
@@ -598,8 +702,8 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
 }
 .advice .adviceContent .adviceBox .description .p1{
     padding: 5px;
-    background-color: #e7e8ea;
-    color: rgb(17, 24, 39);
+    background-color: var(--hover);
+    color: var(--primary-color);
     display: inline-block;
     border-radius: 2px 5px;
     font-size: 12px;
@@ -608,7 +712,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
 .advice .adviceContent .adviceBox .description a{
     font-size: 20px;
     margin-bottom: 10px;
-    color: #000000;
+    color: var(--primary-color);
     font-weight: 600;
 }
 .advice .adviceContent .adviceBox .description a:hover{
@@ -618,7 +722,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     transform: scale(1.05);
 }
 .advice .adviceContent .adviceBox .description .p2{
-    color: #343b41;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 .advice .adviceContent .adviceBox .description .p3{
@@ -626,13 +730,15 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
 }
 .howItWorks{
     padding: 50px 40px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
 }
 .howItWorks h2{
     font-size: 32px;
 }
 .howItWorks p{
     font-size: 18px;
-    color: #343b41;
+    color: var(--primary-color);
     margin-bottom: 30px;
 }
 .howItWorks .howBoxes{
@@ -641,13 +747,13 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
 }
 .howItWorks .howBoxes .howBox i{
     font-size: 40px;
-    color: #343b41;
+    color: var(--primary-color);
 }
 .howItWorks .howBoxes .howBox h3{
     margin: 20px 0px;
 }
 .howItWorks .howBoxes .howBox p{
-    color: #6C757D;
+    color: var(--primary-color);
 }
 .grow{
     display: flex;
@@ -655,7 +761,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     position: relative;
 }
 .grow .growLeft{
-    background-color: #3D7A81;
+    background-color: var(--header-bg);
     padding: 120px 40px;
     flex-basis: 50%;
 }
@@ -674,11 +780,11 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     color: white;
 }
 .grow .growLeft .growbtns .red{
-    background-color: #D85151;
+    background-color: var(--btn);
     margin-right: 20px;
 }
 .grow .growLeft .growbtns .red:hover{
-    background-color: #C92D2D;
+    background-color: var(--btn-hover);
 }
 .grow .growLeft .growbtns .red::before{
     font-family: "Font Awesome 6 Free";
@@ -735,8 +841,9 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     display: flex;
     width: calc(100% - 60px);
     margin: 30px;
-    background-color: #FBEEEE;
+    background-color: var(--get-bg);
     border-radius: 10px;
+    color: var(--primary-color);
 }
 .get .getLeft{
     padding: 50px;
@@ -787,6 +894,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
 }
 .prices{
     padding: 50px 40px;
+    color: var(--primary-color);
 }
 .prices .pricesHeader{
     display: flex;
@@ -798,7 +906,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     font-size: 32px;
 }
 .prices .pricesHeader a{
-    color: #343b41;
+    color: var(--primary-color);
 }
 .prices.pricesHeader a:hover{
     text-decoration: underline;
@@ -840,7 +948,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     padding: 20px 0px;
 }
 .prices .pricesContent .priceBox .rightBox a{
-    color: #000000;
+    color: var(--primary-color);
     font-weight: 600;
     margin: 15px 0px;
 }
@@ -857,7 +965,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     margin-right: 20px;
 }
 .prices .pricesContent .priceBox .rightBox .description .star i{
-    color: #FC9231;
+    color: var(--star);
 }
 .prices .pricesContent .priceBox .rightBox .description .star p span{
     font-size: 12px;
@@ -866,7 +974,7 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
 .prices .pricesContent .priceBox .rightBox .btn{
     font-weight: 400;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--primary-color);
     padding: 10px 15px;
     font-size: 14px;
 }
@@ -874,8 +982,8 @@ section.popularProjects .project .projectbody .rightProjectBody a:hover{
     text-decoration: none;
 }
 .prices .pricesContent .priceBox .btn:hover{
-    background-color: #000000;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 footer{
     background-color: #111827;
@@ -911,11 +1019,11 @@ footer .sub .leftSub .red{
     color: white;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #D85151;
+    background-color: var(--btn);
     border-radius: 10px;
 }
 footer .sub .leftSub .red:hover{
-    background-color: #C92D2D;
+    background-color: var(--btn-hover);
 }
 footer .sub .rightSub{
     display: flex;
@@ -943,7 +1051,7 @@ footer .lists .listsLeft .logo i{
     font-size: 24px;
     height: 36px;
     color: white;
-    background-color: #D85151;
+    background-color: var(--btn);
     padding: 5px;
     border-radius: 20px;
     border-bottom-right-radius: 5px;
@@ -1053,7 +1161,7 @@ footer .rights .imgs ul{
     nav .icon{
         display: inline-block;
         font-size: 24px;
-        color: rgb(17, 24, 39);
+        color: var(--primary-color);
         cursor: pointer;
     }
     nav .navList{

@@ -28,11 +28,8 @@
             <li><a href="#">Components</a></li>
         </ul>
         <div class="navRight">
-            <a href="#" class="navRightIcon"><i class="fa-regular fa-sun" id="sun"></i></a></i>
-            <ul class="sunList">
-                <li></li>
-            </ul>
-            <a href="#" class="navRightIcon" id="user"><i class="fa-regular fa-user"></i></a></i>
+            <i class="fa-regular fa-sun navRightIcon" id="sun"></i>
+            <i class="fa-regular fa-user navRightIcon" id="user"></i>
             <a href="#" class="navRightbtn">Join</a>
         </div>
         <div class="hamburger" id="hamburger">
@@ -70,7 +67,40 @@
         <div class="shadow" id="shadow"></div>
     </nav>
     <aside>       
-         <a href="#" class="customizebtn">CUSTOMIZE</a>
+         <a href="#" class="customizebtn" id="customizeBtn">CUSTOMIZE</a>
+         <div class="colors" id="colors">
+            <div class="colorsHeader">
+                <h2>Customize theme</h2>
+                <i class="fa-solid fa-xmark" id="asideClose"></i>
+            </div>
+            <div class="colorsContent">
+                <div class="title">
+                   <i class="fa-solid fa-palette"></i>
+                    <h3>Colors</h3> 
+                </div>
+                <div class="colorList">
+                    <div class="colorBox">
+                        <h4>Primary</h4>
+                        <input type="color" id="btnPicker" value="#D85151">
+                    </div>
+                    <div class="colorBox">
+                        <h4>Warning</h4>
+                        <input type="color" id="starPicker" value="#FC9231">
+                    </div>
+                    <div class="colorBox">
+                        <h4>Danger</h4>
+                        <input type="color" id="btnHoverPicker" value="#C92D2D">
+                    </div>
+                    <div class="colorBox">
+                        <h4>Info</h4>
+                        <input type="color" id="headerPicker" value="#3D7A81">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="colorsFooter">
+                <button id="resetBtn">Reset</button>
+        </div>
     </aside>
     <header>
         <div class="headerLeftImg">
